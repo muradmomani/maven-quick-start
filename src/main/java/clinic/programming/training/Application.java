@@ -30,7 +30,7 @@ public class Application {
         System.out.println("Word Count:" + count);
     }
 
-    private int countWords(String words) {
+    public int countWords(String words) {
         String[] sparateWords = StringUtils.split(words, ' ');
         return (sparateWords == null) ? 0 : sparateWords.length;
     }
