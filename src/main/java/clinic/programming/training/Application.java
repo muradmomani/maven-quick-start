@@ -32,7 +32,7 @@ public class Application {
 
     private int countWords(String words) {
         String[] sparateWords = StringUtils.split(words, ' ');
-        return (sparateWords == null) ? 0 : sparateWords.length
+        return (sparateWords == null) ? 0 : sparateWords.length;
     }
 }
 
