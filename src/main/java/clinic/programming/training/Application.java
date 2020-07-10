@@ -1,28 +1,38 @@
 package clinic.programming.training;
 
+
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Application {
-    
-	public void greet(){
-	List<String> greetings = new ArrayList<>();
-	greetings.add("Hello");
 
-	for (String greeting : greetings){
-	System.out.println("Greeting: " + greeting);
-	}
-	}	
+    public void greet() {
+        List<String> greetings = new ArrayList<>();
+        greetings.add("Hello");
+
+        for (String greeting : greetings) {
+            System.out.println("Greeting: " + greeting);
+        }
+    }
 
     public Application() {
-        System.out.println ("Inside Application");
+        System.out.println("Inside Application");
     }
 
     // method main(): ALWAYS the APPLICATION entry point
-    public static void main (String[] args) {
-    	System.out.println ("Starting Application");
-	Application app = new Application();
-	app.greet();
+    public static void main(String[] args) {
+        System.out.println("Starting Application");
+        Application app = new Application();
+        app.greet();
+        int count = app.countWords("i have four words");
+        System.out.println("Word Count:" + count);
+    }
+
+    private int countWords(String words) {
+        String[] sparateWords = StringUtils.split(words, ' ');
+        return (sparateWords == null) ? 0 : sparateWords.length
     }
 }
 
